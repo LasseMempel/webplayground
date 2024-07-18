@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.conservationontology.com/conservationontology.owl"
+         xmlns="http://www.conservationontology.com/conservationontology.owl#">
+
+<owl:Ontology rdf:about="http://www.conservationontology.com/conservationontology.owl">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konservierungs- und Restaurierungsontologie des LEIZA</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#bearbeitet">
+  <rdfs:domain rdf:resource="#Objekt"/>
+  <rdfs:range rdf:resource="#RestauratorIn"/>
+  <owl:inverseOf rdf:resource="#wirdBearbeitetVon"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdBearbeitetVon">
+  <rdfs:domain rdf:resource="#RestauratorIn"/>
+  <rdfs:range rdf:resource="#Objekt"/>
+  <owl:inverseOf rdf:resource="#bearbeitet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#führtDurch">
+  <rdfs:domain rdf:resource="#RestauratorIn"/>
+  <rdfs:range rdf:resource="#Objektuntersuchung"/>
+  <rdfs:range rdf:resource="#technologischeAuswertung"/>
+  <owl:inverseOf rdf:resource="#wirdDurchgeführtVon"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdDurchgeführtVon">
+  <rdfs:domain rdf:resource="#Objektuntersuchung"/>
+  <rdfs:domain rdf:resource="#technologischeAuswertung"/>
+  <rdfs:range rdf:resource="#RestauratorIn"/>
+  <owl:inverseOf rdf:resource="#führtDurch"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#führtZu">
+  <rdfs:domain rdf:resource="#Objektuntersuchung"/>
+  <rdfs:range rdf:resource="#Ergebnis"/>
+  <owl:inverseOf rdf:resource="#entstehtAus"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#entstehtAus">
+  <rdfs:domain rdf:resource="#Ergebnis"/>
+  <rdfs:range rdf:resource="#Objektuntersuchung"/>
+  <owl:inverseOf rdf:resource="#führtZu"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#stelltFest">
+  <rdfs:domain rdf:resource="#Objektuntersuchung"/>
+  <rdfs:range rdf:resource="#Zustand"/>
+  <owl:inverseOf rdf:resource="#wirdFestgestelltDurch"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdFestgestelltDurch">
+  <rdfs:domain rdf:resource="#Zustand"/>
+  <rdfs:range rdf:resource="#Objektuntersuchung"/>
+  <owl:inverseOf rdf:resource="#stelltFest"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#zeigtSichDurch">
+  <rdfs:domain rdf:resource="#Zustand"/>
+  <rdfs:range rdf:resource="#Schadensphänomen"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#zeigenAn">
+  <rdfs:domain rdf:resource="#Schadensphänomen"/>
+  <rdfs:range rdf:resource="#Zustand"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hatUrsache">
+  <rdfs:domain rdf:resource="#Schadensphänomen"/>
+  <rdfs:range rdf:resource="#Schadensursache"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bedingt">
+  <rdfs:domain rdf:resource="#Zustand"/>
+  <rdfs:range rdf:resource="#Restaurierungskonzept"/>
+  <owl:inverseOf rdf:resource="#beziehtSichAuf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#beziehtSichAuf">
+  <rdfs:domain rdf:resource="#Restaurierungskonzept"/>
+  <rdfs:range rdf:resource="#Zustand"/>
+  <owl:inverseOf rdf:resource="#bedingt"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#erstellt">
+  <rdfs:domain rdf:resource="#RestauratorIn"/>
+  <rdfs:range rdf:resource="#Restaurierungskonzept"/>
+  <owl:inverseOf rdf:resource="#wirdErstelltVon"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdErstelltVon">
+  <rdfs:domain rdf:resource="#Restaurierungskonzept"/>
+  <rdfs:range rdf:resource="#RestauratorIn"/>
+  <owl:inverseOf rdf:resource="#erstellt"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bestehtAus">
+  <rdfs:domain rdf:resource="#Objekt"/>
+  <rdfs:range rdf:resource="#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wurdeHergestelltDurch">
+  <rdfs:domain rdf:resource="#Objekt"/>
+  <rdfs:range rdf:resource="#Herstellungstechnik"/>
+  <owl:inverseOf rdf:resource="#gibtAuskunftÜber"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gibtAuskunftÜber">
+  <rdfs:domain rdf:resource="#Herstellungstechnik"/>
+  <rdfs:range rdf:resource="#Objekt"/>
+  <owl:inverseOf rdf:resource="#wurdeHergestelltDurch"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#benutzt">
+  <rdfs:domain rdf:resource="#RestauratorIn"/>
+  <rdfs:range rdf:resource="#Werkzeug"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#verwendet">
+  <rdfs:domain rdf:resource="#Materialanalyse"/>
+  <rdfs:range rdf:resource="#Werkzeug"/>
+  <owl:inverseOf rdf:resource="#wirdVerwendet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdVerwendet">
+  <rdfs:domain rdf:resource="#Werkzeug"/>
+  <rdfs:range rdf:resource="#Materialanalyse"/>
+  <owl:inverseOf rdf:resource="#verwendet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hat">
+  <rdfs:domain rdf:resource="#Materialanalyse"/>
+  <rdfs:domain rdf:resource="#praktischeMaßnahme"/>
+  <rdfs:range rdf:resource="#Methode"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gibtAn">
+  <rdfs:domain rdf:resource="#Ergebnis"/>
+  <rdfs:range rdf:resource="#Material"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#gebraucht">
+  <rdfs:domain rdf:resource="#praktischeMaßnahme"/>
+  <rdfs:range rdf:resource="#Werkzeug"/>
+  <rdfs:range rdf:resource="#Material"/>
+  <owl:inverseOf rdf:resource="#wirdGebrauchtFür"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#wirdGebrauchtFür">
+  <rdfs:domain rdf:resource="#Werkzeug"/>
+  <rdfs:domain rdf:resource="#Material"/>
+  <rdfs:range rdf:resource="#praktischeMaßnahme"/>
+  <owl:inverseOf rdf:resource="#gebraucht"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#RestauratorIn">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Objekt">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Objektuntersuchung">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ergebnis">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Methode">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#praktischeMaßnahme">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Material">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Werkzeug">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#technologischeAuswertung">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Herstellungstechnik">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Restaurierungskonzept">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Zustand">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Schadensphänomen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Schadensursache">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Materialanalyse">
+  <rdfs:subClassOf rdf:resource="#Objektuntersuchung"/>
+</owl:Class>
+
+<owl:Class rdf:about="#manuellesWerkzeug">
+  <rdfs:subClassOf rdf:resource="#Werkzeug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#technischesGerät">
+  <rdfs:subClassOf rdf:resource="#Werkzeug"/>
+</owl:Class>
+
+
+</rdf:RDF>
