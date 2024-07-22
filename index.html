@@ -52,7 +52,7 @@
             //writeFile(data.form.file)
             //fileFromUrl(data.form.file)
             const response2 = await fetch(data.form.file);
-            const data2 = await response.json();
+            const data2 = await response2.json();
             writeFile(data2.files.file)
         }
 
