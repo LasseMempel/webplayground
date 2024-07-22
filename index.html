@@ -42,7 +42,6 @@
             const inputURL = document.getElementById('textInput').value;
             // fetch csv from google sheet link
             const response = await fetch(inputURL);
-            const jsonResponse = await response.json();
             /*
             const reader = new FileReader();
             reader.onload = function(e) {
@@ -51,7 +50,7 @@
             };
             const text = reader.readAsText(response);
             */
-            writeFile(jsonResponse)
+            writeFile(response.text())
         }
         function writeFile(data) {
             const resultDiv = document.getElementById('result');
