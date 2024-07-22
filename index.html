@@ -31,26 +31,16 @@
             fileFromUrlTest();
         }
 
-        async function uploadFiles() {
-            const url = 'https://httpbin.org/post';
-            const formData = new FormData(fileForm);
-            const fetchOptions = {
-                method: 'post',
-                body: formData
-            };
-            const response = await fetch(url, fetchOptions);
-            const data = await response.json();
-            writeFile(data.files.file)
-        }
-
         function inputFileTest() {
             const input = document.getElementById('changerino');
             const file = input.files[0];
+            // red content of file
             const reader = new FileReader();
             reader.onload = function(e) {
-                const text = reader.result;
-                console.log(text);
+                const text = e.target.result;
+                writeFile(text);
             };
+            const text = reader.readAsText(file);
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = text
         }
