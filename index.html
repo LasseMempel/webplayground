@@ -1,26 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Playground</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="CoffeeAndConservationLogo.png">
-        <script src="script.js"></script>
-        <script>
-            
-        </script>
     </head>
     <body>
-        <h1 style="text-align: center;">Web Playground</h1>
-        <img src="CoffeeAndConservationLogo.png" alt="Coffee and Conservation Logo">
-        <br>
-        <hr>
-        <p title="playtime!">Were going to <mark>play</mark></p>
-        <address> Work by Lasse Mempel-Länger </address>
-        <div>
-            <p>Text in a box</p>
-        </div>
-        <div id="output" style="height:1000px;width:100%;">
-
-        </div>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data" id="fileForm">
+            <input name="file" type="file" multiple id="changerino">
+            <button type="submit">Upload</button>
+        </form>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data", id="textForm">
+            <input name="file" type="text" id="textInput" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCho2k88nLWrNSXj4Mgj_MwER5GQ9zbZ0OsO3X_QPa9s-3UkoeLLQHuNHoFMKqCFjWMMprKVHMZzOj/pub?gid=0&single=true&output=csv">
+            <button id="submitButton2" type="submit">Validieren</button>
+        </form>
+        <div id="result"></div>
     </body>
+    <script>
+        const fileForm = document.getElementById('fileForm');
+        fileForm.addEventListener('submit', handleFileSubmit);
+        const textForm = document.getElementById('textForm');
+        textForm.addEventListener('submit', handleTextSubmit);
+
+        function handleFileSubmit(event) {
+            event.preventDefault();
+            uploadFiles();
+        }
+
+        function handleTextSubmit(event) {
+            event.preventDefault();
+            uploadUrl();
+        }
+
+        async function uploadFiles() {
+            const url = 'https://httpbin.org/post';
+            const formData = new FormData(fileForm);
+            const fetchOptions = {
+                method: 'post',
+                body: formData
+            };
+            const response = await fetch(url, fetchOptions);
+            const data = await response.json();
+            writeFile(data.files.file)
+        }
+        async function uploadUrl() {
+            const url = 'https://httpbin.org/post';
+            const formData = new FormData(textForm);
+            const fetchOptions = {
+                method: 'post',
+                body: formData
+            };
+            const response = await fetch(url, fetchOptions);
+            const data = await response.json();
+            //writeFile(data.form.file)
+            //fileFromUrl(data.form.file)
+            const response2 = await fetch(data.form.file);
+            const data2 = await response.json();
+            writeFile(data2.files.file)
+        }
+
+        async function fileFromUrl(Data) {
+            const url = 'https://httpbin.org/post';
+            const formData = new FormData(await fetch(Data));
+            const fetchOptions = {
+                method: 'post',
+                body: formData
+            };
+            const response = await fetch(url, fetchOptions);
+            const data = await response.json();
+            writeFile(data.files.file)
+        }
+
+        function writeFile(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = data
+        }
+
+    </script>
 </html>
