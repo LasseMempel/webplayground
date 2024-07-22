@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+            <input name="file" type="file" multiple id="changerino">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="result"></div>
+    </body>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', handleSubmit);
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            uploadFiles();
+            //writeFile(data)
+        }
+        async function uploadFiles() {
+            const url = 'https://httpbin.org/post';
+            const formData = new FormData(form);
+            const fetchOptions = {
+                method: 'post',
+                body: formData
+            };
+            const response = await fetch(url, fetchOptions);
+            const data = await response.json();
+            //console.log(data);
+            //const resultDiv = document.getElementById('result');
+            //resultDiv.innerHTML = data.files.file
+            writeFile(data)
+        }
+
+        function writeFile(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = data.files.file
+            document.getElementById("changerino").value = "Johnny Bravo"; 
+        }
+
+    </script>
+</html>
