@@ -47,14 +47,15 @@
             const inputURL = document.getElementById('textInput').value;
             // fetch csv from google sheet link
             const response = await fetch(inputURL);
-            // read content of file
+            /*
             const reader = new FileReader();
             reader.onload = function(e) {
                 const text = e.target.response;
                 writeFile(text);
             };
             const text = reader.readAsText(response);
-            writeFile(text)
+            */
+            writeFile(response)
         }
 
         function writeFile(data) {
