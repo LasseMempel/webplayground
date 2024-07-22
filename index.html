@@ -45,40 +45,19 @@
             resultDiv.innerHTML = text
         }
 
-        async function uploadUrl() {
-            const url = 'https://httpbin.org/post';
-            const formData = new FormData(textForm);
-            const fetchOptions = {
-                method: 'post',
-                body: formData
-            };
-            const response = await fetch(url, fetchOptions);
-            const data = await response.json();
-            //writeFile(data.form.file)
-            //fileFromUrl(data.form.file)
-            const response2 = await fetch(data.form.file);
-            const data2 = await response2.json();
-            writeFile(data2.files.file)
-        }
-
-        async function fileFromUrl(Data) {
-            const url = 'https://httpbin.org/post';
-            const formData = new FormData(await fetch(Data));
-            const fetchOptions = {
-                method: 'post',
-                body: formData
-            };
-            const response = await fetch(url, fetchOptions);
-            const data = await response.json();
-            writeFile(data.files.file)
-        }
-
         async function fileFromUrlTest() {
             const inputURL = document.getElementById('textInput').value;
+            // fetch csv from google sheet link
             const response = await fetch(inputURL);
-            //const data = await response.json();
+            // read content of file
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const text = e.target.response;
+                writeFile(text);
+            };
+            const text = reader.readAsText(file);
             const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = response
+            resultDiv.innerHTML = text
         }
 
         function writeFile(data) {
