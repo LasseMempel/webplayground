@@ -17,6 +17,7 @@
     <script>
         const fileForm = document.getElementById('fileForm');
         fileForm.addEventListener('submit', handleFileSubmit);
+
         const textForm = document.getElementById('textForm');
         textForm.addEventListener('submit', handleTextSubmit);
 
@@ -27,7 +28,7 @@
 
         function handleTextSubmit(event) {
             event.preventDefault();
-            uploadUrl();
+            fileFromUrlTest();
         }
 
         async function uploadFiles() {
@@ -80,6 +81,14 @@
             const response = await fetch(url, fetchOptions);
             const data = await response.json();
             writeFile(data.files.file)
+        }
+
+        async function fileFromUrlTest() {
+            const inputURL = document.getElementById('textInput').value;
+            const response = await fetch(inputURL);
+            const data = await response.json();
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = data
         }
 
         function writeFile(data) {
