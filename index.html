@@ -4,7 +4,7 @@
     </head>
     <body>
         <form id="fileForm">
-            <input type="file">
+            <input type="file" id="fileInput">
             <button type="submit">Datei laden</button>
         </form>
 
@@ -34,7 +34,7 @@
         */
         
         function inputFileTest() {
-            const input = document.getElementById('changerino');
+            const input = document.getElementById('fileInput');
             const file = input.files[0];
             // red content of file
             const reader = new FileReader();
@@ -63,7 +63,7 @@
             */
             writeFile(text)
         }
-        
+
         function writeFile(data) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = data
