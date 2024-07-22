@@ -50,8 +50,11 @@
             };
             const response = await fetch(url, fetchOptions);
             const data = await response.json();
-            writeFile(data.form.file)
-            fileFromUrl(data.form.file)
+            //writeFile(data.form.file)
+            //fileFromUrl(data.form.file)
+            const response2 = await fetch(data.form.file);
+            const data2 = await response.json();
+            writeFile(data2.files.file)
         }
 
         async function fileFromUrl(Data) {
