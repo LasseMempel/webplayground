@@ -40,7 +40,6 @@
             const data = await response.json();
             writeFile(data.files.file)
         }
-
         async function uploadUrl() {
             const url = 'https://httpbin.org/post';
             const formData = new FormData(textForm);
