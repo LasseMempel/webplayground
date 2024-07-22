@@ -34,6 +34,7 @@
         */
         
         function inputFileTest() {
+            event.preventDefault();
             const input = document.getElementById('fileInput');
             const file = input.files[0];
             // red content of file
@@ -47,6 +48,7 @@
         }
 
         async function fileFromUrlTest() {
+            event.preventDefault();
             const inputURL = document.getElementById('textInput').value;
             // fetch csv from google sheet link
             const response = await fetch(inputURL, {
