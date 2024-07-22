@@ -3,29 +3,36 @@
     <head>
     </head>
     <body>
-        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data" id="fileForm">
-            <input name="file" type="file" multiple id="changerino">
-            <button type="submit">Upload</button>
+        <form id="fileForm">
+            <input type="file">
+            <button type="submit">Datei laden</button>
         </form>
-        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data", id="textForm">
-            <input name="file" type="text" id="textInput" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCho2k88nLWrNSXj4Mgj_MwER5GQ9zbZ0OsO3X_QPa9s-3UkoeLLQHuNHoFMKqCFjWMMprKVHMZzOj/pub?gid=0&single=true&output=csv">
-            <button id="submitButton2" type="submit">Upload</button>
+
+        <form id="textForm">
+            <input type="text" id="textInput" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCho2k88nLWrNSXj4Mgj_MwER5GQ9zbZ0OsO3X_QPa9s-3UkoeLLQHuNHoFMKqCFjWMMprKVHMZzOj/pub?gid=0&single=true&output=csv">
+            <button type="submit">URL laden</button>
         </form>
         <div id="result"></div>
     </body>
     <script>
         const fileForm = document.getElementById('fileForm');
-        fileForm.addEventListener('submit', handleFileSubmit);
+        fileForm.addEventListener('submit', inputFileTest());
+
         const textForm = document.getElementById('textForm');
-        textForm.addEventListener('submit', handleTextSubmit);
-        function handleFileSubmit(event) {
-            event.preventDefault();
+        textForm.addEventListener('submit', fileFromUrlTest());
+
+        /*
+        function handleFileSubmit() {
+            //event.preventDefault();
             inputFileTest();
         }
+
         function handleTextSubmit(event) {
             event.preventDefault();
             fileFromUrlTest();
         }
+        */
+        
         function inputFileTest() {
             const input = document.getElementById('changerino');
             const file = input.files[0];
@@ -38,6 +45,7 @@
             const text = reader.readAsText(file);
             writeFile(text)
         }
+
         async function fileFromUrlTest() {
             const inputURL = document.getElementById('textInput').value;
             // fetch csv from google sheet link
@@ -55,6 +63,7 @@
             */
             writeFile(text)
         }
+        
         function writeFile(data) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = data
