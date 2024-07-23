@@ -9,6 +9,7 @@
             <button type="submit">Datei laden</button>
         </form>
         <div id="result"></div>
+        <div id="testing"></div>
     </body>
     <script>
         const fileForm = document.getElementById('fileForm');
@@ -63,6 +64,8 @@
             const result = document.getElementById('result');
             result.innerHTML = '';
             result.appendChild(generateGraph(data));
+            const testing = document.getElementById('testing');
+            result.innerHTML=data
         }
 
         /*
