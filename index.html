@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="js/d3.v7.min.js"></script>
     </head>
     <body>
         <form id="fileForm">
@@ -81,8 +82,8 @@
         }
         function generateGraph(data) {
             // Specify the dimensions of the chart.
-            const width = 928;
-            const height = 600;
+            const width = 2000;
+            const height = 1200;
 
             // Specify the color scale.
             const color = d3.scaleOrdinal(d3.schemeCategory10);
