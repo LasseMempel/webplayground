@@ -10,7 +10,8 @@
             <button type="submit">Datei laden</button>
         </form>
         <div id="result"></div>
-        <div id="testing"></div>
+        <div id="input"></div>
+        <div id="output"></div>
     </body>
     <script>
         const fileForm = document.getElementById('fileForm');
@@ -35,7 +36,7 @@
                 if (object["@type"] == ["http://www.w3.org/2002/07/owl#Class"]) {
                     node.id = stripOwlPrefix(object["@id"]);
                     node.group = 1;
-                    if (object["http://www.w3.org/2000/01/rdf-schema#subClassOf"]) {
+                    if (object.hasOwnProperty("http://www.w3.org/2000/01/rdf-schema#subClassOf")) {
                         let link = {}
                         link.source = stripOwlPrefix(object["@id"]);
                         for (const target of object["http://www.w3.org/2000/01/rdf-schema#subClassOf"]) {
@@ -45,6 +46,7 @@
                             data.links.push(link);
                         }
                     }
+                data.nodes.push(node)
                 }
                 if (object["@type"] == ["http://www.w3.org/2002/07/owl#ObjectProperty"]) {
                     node.id = stripOwlPrefix(object["@id"]);
@@ -62,11 +64,14 @@
                     }
                 }
             }
-            const result = document.getElementById('result');
+            const result = document.getElementById('output');
             result.innerHTML = '';
             result.appendChild(generateGraph(data));
-            const testing = document.getElementById('testing');
-            result.innerHTML=JSON.stringify(data);
+            const input = document.getElementById('input');
+            input.innerHTML=JSON.stringify(jsonld);
+            const output=document.getElementById("output");
+            output.innerHTML=JSON.stringify(data)
+            
         }
 
         /*
