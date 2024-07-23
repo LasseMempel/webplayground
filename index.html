@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://frogcat.github.io/ttl2jsonld/ttl2jsonld.js"></script>
     </head>
     <body>
         <form id="fileForm">
             <input type="file" id="fileInput">
             <button type="submit">Datei laden</button>
         </form>
-
-        <form id="textForm">
-            <input type="text" id="textInput" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCho2k88nLWrNSXj4Mgj_MwER5GQ9zbZ0OsO3X_QPa9s-3UkoeLLQHuNHoFMKqCFjWMMprKVHMZzOj/pub?gid=0&single=true&output=csv">
-            <button type="submit">URL laden</button>
-        </form>
         <div id="result"></div>
     </body>
     <script>
         const fileForm = document.getElementById('fileForm');
         fileForm.addEventListener('submit', inputFileTest);
-
-        const textForm = document.getElementById('textForm');
-        textForm.addEventListener('submit', fileFromUrlTest);
-        
         function inputFileTest() {
             event.preventDefault();
             const input = document.getElementById('fileInput');
@@ -33,29 +25,17 @@
             };
             const text = reader.readAsText(file);
         }
-
-        async function fileFromUrlTest() {
-            event.preventDefault();
-            const inputURL = document.getElementById('textInput').value;
-            // fetch csv from google sheet link
-            const response = await fetch(inputURL, {
-                headers: { "content-type": "text/csv;charset=UTF-8" },
-            });
-            const text = await response.text();
-            /*
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const text = e.target.response;
-                writeFile(text);
-            };
-            const text = reader.readAsText(response);
-            */
-            writeFile(text)
-        }
-
         function writeFile(data) {
             const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = data
+            const jsonld = ttl2jsonld.parse(data);
+            resultDiv.innerHTML = jsonld
         }
     </script>
 </html>
+
+
+
+
+
+
+
