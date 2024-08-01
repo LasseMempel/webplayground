@@ -6,15 +6,28 @@
     <script src="js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <form id="fileForm">
+        <input type="text" id="textInput"> </input>
+        <button type="submit">Graph laden</button>
+    </form>
     <div id="rdfDiv"></div>
 </body>
 <script>
-    var store = $rdf.graph()
-    var timeout = 5000
-    var fetcher = new $rdf.Fetcher(store, timeout)
-    var url = 'https://github.com/Research-Squirrel-Engineers/campanian-ignimbrite-geo/blob/main/rdf/ci_full.ttl'
-    
-    fetcher.nowOrWhenFetched(url, function(ok, body, response) {
+    let formFunction = () => {
+        event.preventDefault();
+        const input = document.getElementById('textInput');
+        const text = input.value;
+        loadOntology(text);
+    }
+    const fileForm = document.getElementById('fileForm');
+    fileForm.addEventListener('submit', formFunction);
+
+    let loadOntology = (input) => {
+        var store = $rdf.graph()
+        var timeout = 5000
+        var url = input
+        var fetcher = new $rdf.Fetcher(store, timeout)
+        fetcher.nowOrWhenFetched(url, function(ok, body, response) {
         if (!ok) {
             console.log("Oops, something happened and couldn't fetch data " + body);
         } else if (response.onErrorWasCalled || response.status !== 200) {
@@ -23,6 +36,8 @@
             console.log("---data loaded---")
             console.log(response)
         }
-    })
+        })
+    }
+
 </script>
 </html>
