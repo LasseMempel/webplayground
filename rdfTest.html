@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/rdflib.js"></script>
+    </head>
+    <form id="textForm">
+        <input type="text" id="textInput" value="https://raw.githubusercontent.com/RGZM/samian-lod/main/ontology/ontology.ttl">
+        <button type="submit">URL laden</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        function readGraphFromString(body, store, uri, mimeType) {
+            $rdf.parse(body, store, uri, mimeType);
+            return store;
+        }
+
+        async function readGraphFromUri(uri) {
+            var store = $rdf.graph()
+            var timeout = 5000 // 5000 ms timeout
+            var fetcher = new $rdf.Fetcher(store, timeout)
+            fetchedStore = await fetcher.load(uri);
+            return fetchedStore;
+        }
+
+        function serializeGraph(store) {
+            return new $rdf.Serializer(store).toN3(store);
+        }
+
+        function decodeGraph(store) {
+            return decodeURIComponent(serializeGraph(store));
+        }
+
+        async function writeGraphToDiv() {
+            var uri = document.getElementById('textInput').value;
+            console.log(uri)
+            var response = await fetch(uri);
+            if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+            }
+            var graphString = await response.text();
+            var store = $rdf.graph()
+            var mimeType = 'text/turtle';
+            var storeGraph = readGraphFromString(graphString, store, uri, mimeType);
+            var serializedGraph = serializeGraph(storeGraph)
+            //var decodedGraph = decodeGraph(store);
+            $('#output').html(serializedGraph);
+        }
+
+        var textForm = document.getElementById('textForm');
+        textForm.addEventListener('submit', writeGraphToDiv);
+
+        /*
+        var commenter = "KristinaFella"
+        var commentry = "Definition veraltet"
+        var concept = "Krakauer"
+        var body = `<${commenter}> <a> <${concept}> .`;
+        var store = $rdf.graph();
+        const uri = 'https://restaurierungsvokabular.solidweb.org/wuerste/krakauer.ttl';
+        var mimeType = 'text/turtle';
+        */
+
+        //var Graph = readGraphFromString(body, store, uri, mimeType);
+        //var serializedGraph = serializeGraph(Graph);
+        //var decodedGraph = decodeGraph(Graph);
+
+        //console.log(serializedGraph);
+        //$('#output').html(serializedGraph);
+
+
+        /* namespaces
+        var RDF = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+        var RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+        var FOAF = Namespace("http://xmlns.com/foaf/0.1/")
+        var XSD = Namespace("http://www.w3.org/2001/XMLSchema#")
+        var AO = Namespace("http://www.w3.org/ns/oa#")
+        var DC = Namespace("http://purl.org/dc/terms/")
+        var LT = Namespace("http://leiza.de/thesaurus/#")
+        var SK = Namespace("http://www.w3.org/2004/02/skos/core#")
+        */
+
+        /* Literals
+        //Untyped Literal 	
+        x = $rdf.literal('abc') 	
+        //Typed Literal 	
+        x = $rdf.literal('8080', undefined, XSD('int')) 
+        //Literal with language 	
+        x = $rdf.literal('car', 'en') 	
+        */
+    </script>
+</html>

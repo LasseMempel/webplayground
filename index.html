@@ -10,34 +10,94 @@
         <input type="text" id="textInput"> </input>
         <button type="submit">Graph laden</button>
     </form>
-    <div id="rdfDiv"></div>
+    <div id="rdfDiv">
+        <p id="paragraphText"></p>
+    </div>
 </body>
 <script>
-    let formFunction = () => {
-        event.preventDefault();
-        const input = document.getElementById('textInput');
-        const text = input.value;
-        loadOntology(text);
-    }
-    const fileForm = document.getElementById('fileForm');
-    fileForm.addEventListener('submit', formFunction);
 
-    let loadOntology = (input) => {
-        var store = $rdf.graph()
-        var timeout = 5000
-        var url = input
-        var fetcher = new $rdf.Fetcher(store, timeout)
-        fetcher.nowOrWhenFetched(url, function(ok, body, response) {
-        if (!ok) {
-            console.log("Oops, something happened and couldn't fetch data " + body);
-        } else if (response.onErrorWasCalled || response.status !== 200) {
-            console.log('    Non-HTTP error reloading data! onErrorWasCalled=' + response.onErrorWasCalled + ' status: ' + response.status)
-        } else {
-            console.log("---data loaded---")
-            console.log(response)
-        }
-        })
+//let podUrl = "https://leiza-rse.solidweb.org/tiger/CA2MapBritannia.ttl";
+let podUrl = "https://restaurierungsvokabular.solidweb.org/wuerste/krakauer.ttl";
+
+/*
+let loadOntology = (input) => {
+    var store = $rdf.graph()
+    var timeout = 5000
+    var url = input
+    var fetcher = new $rdf.Fetcher(store, timeout)
+    fetcher.nowOrWhenFetched(url, function(ok, body, response) {
+    if (!ok) {
+        console.log("Oops, something happened and couldn't fetch data " + body);
+    } else if (response.onErrorWasCalled || response.status !== 200) {
+        console.log('    Non-HTTP error reloading data! onErrorWasCalled=' + response.onErrorWasCalled + ' status: ' + response.status)
+    } else {
+        console.log("---data loaded---")
+        console.log(response)
     }
+    })
+}
+*/
+
+let formFunction = () => {
+    event.preventDefault();
+    const input = document.getElementById('textInput');
+    const text = input.value;
+    loadOntology(text);
+}
+const fileForm = document.getElementById('fileForm');
+fileForm.addEventListener('submit', formFunction);
+
+let writeTtlToDiv = (ttl) => {
+    //$('#rdfDiv').empty();
+    console.log(ttl);
+    //$('#rdfDiv').append(ttl);
+    $('#paragraphText').text(ttl);
+}
+
+// https://github.com/SolidOS/solid-tutorial-rdflib.js?files=1
+let writeToStore2 = (data) => {
+    var uri = 'example.org/resource.ttl' // https://
+    var body = '<a> <b> <c> .'
+    var mimeType = 'text/turtle'
+    var store = $rdf.graph()
+    try {
+        var a = $rdf.parse(body, store, uri, mimeType);
+        console.log(a);
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+//https://linkeddata.github.io/rdflib.js/Documentation/webapp-intro.html
+let writeToStore = (rdfString, rdfUri, rdfStore, callbackFunction) => {
+    //let text = data;
+    rdfStore = $rdf.parse(rdfString, rdfStore, rdfUri.uri, "text/turtle");
+    console.log(rdfStore);
+    callbackFunction; //encodeURIComponent()
+}
+
+let readFromPod = (podUrl, callbackFunction) =>{
+    $.ajax({
+        url: podUrl,
+        type: 'GET',
+        contentType: 'text/turtle',
+        //async: false,
+        success: function(result) {
+            console.log(result);
+            //document.getElementById('podText').value = data;
+            callbackFunction(result);
+        },
+        error: function(result) {
+            console.log('Error:', result);
+        }
+    }); 
+}
+
+//readFromPod(podUrl, writeToStore);
+let rdfString = '<#this>  a  <#Example> .';
+let rdfUri = $rdf.sym("https://example.com/alice/card");
+let rdfStore = $rdf.graph();
+writeToStore(rdfString, rdfUri, rdfStore, writeTtlToDiv(rdfStore.toNT()));
 
 </script>
 </html>

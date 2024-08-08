@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <p id="response"></p>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        const url = "https://restaurierungsvokabular.solidweb.org/wuerste/krakauer.ttl";
+        async function getData(url) {
+            try {
+                let response = await fetch(url);
+                if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+                }
+                let text = await response.text();
+                //console.log(text);
+                return text;
+                
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        async function getAjaxData(url) {
+            let result;
+            try {
+                result = await $.ajax({
+                    url: url,
+                    type: 'GET'
+                });
+                return result;
+            } catch (error) {
+                console.error(error);
+            }
+}
+
+        async function twoAsyncs() {
+            const text1 = await getAjaxData(url);
+            const text2 = await getAjaxData(url);
+            const text = text1 + text2;
+            $("#response").text(text);
+        }
+        twoAsyncs()
+    </script>
+</html>
