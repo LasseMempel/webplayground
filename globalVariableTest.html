@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form id="textForm">
+            <input type="text" id="textInput" value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCho2k88nLWrNSXj4Mgj_MwER5GQ9zbZ0OsO3X_QPa9s-3UkoeLLQHuNHoFMKqCFjWMMprKVHMZzOj/pub?gid=0&single=true&output=csv">
+            <button type="submit">URL laden</button>
+        </form>
+        <button type="submit" id="submitButton">Datei laden</button>
+        <div id="result"></div>
+    </body>
+    <script>
+
+        const textForm = document.getElementById('textForm');
+        textForm.addEventListener('submit', event =>{let inputURL = fileFromUrlTest()});
+
+        const submitButton = document.getElementById('submitButton');
+        submitButton.addEventListener('click', writeOutput);
+
+        async function fileFromUrlTest() {
+            event.preventDefault();
+            const inputURL = document.getElementById('textInput').value;
+            return inputURL
+        }
+
+        function writeOutput() {
+            writeFile(inputURL)
+        }
+
+        function writeFile(data) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = data
+        }
+    </script>
+</html>
