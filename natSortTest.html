@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <p id="input"></p>
+        <p id="output"></p>
+        <p id="timecheck"></p>
+        <script>
+            let inputParagraph = document.getElementById("input");
+            let outputParagraph = document.getElementById("output");
+            let timeCheckParagraph = document.getElementById("timecheck");
+            let inputJson = '{"a": 4, "b": 2, "c": 3}';
+            let input = JSON.parse(inputJson);
+            // create array from all keys in input
+            let keys = Object.keys(input);
+            inputParagraph.innerHTML = keys;
+            // sort the array
+            let sortedKeys = keys.sort(function(a, b){return input[a] - input[b]});
+            outputParagraph.innerHTML = sortedKeys;
+            let time = new Date() //.toISOString();
+            let diff = time.getTimezoneOffset();
+            timeCheckParagraph.innerHTML = time.toISOString() + " " + diff + " " + time.getFullYear() + "-" + time.getMonth() + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + " Uhr";
+        </script>
+    </html>
