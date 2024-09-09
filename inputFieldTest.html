@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <form>
+        <input type="text" id="inputField">
+        <button id="inputButton"> alert input </button>
+    </form>
+    <script>
+        const inputButton = document.getElementById("inputButton");
+        const inputField = document.getElementById("inputField");
+        inputButton.addEventListener("click", function() {
+            alert(inputField.value);
+        });
+    </script>
+</html>
