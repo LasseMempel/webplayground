@@ -1,284 +1,284 @@
-@prefix ns1: <http://purl.org/dc/terms/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
-@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns3: <http://www.w3.org/ns/oa#> .
 
-<annotations/ConceptScheme1/DA2D73> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno1> a ns3:Annotation ;
+    ns2:created "2024-08-29T17:14:02.574Z" ;
+    ns2:creator "Lasse" ;
+    ns3:bodyValue "Wir freuen uns immer über weitere Beiträge. Gern einfach in ein weiteres Kommentar schreiben, damit Kristina das ganzen nach dem Urlaub aufnehmen kann. Eine Funktion selbst Änderungen am Thesaurus vorzunehmen, konnte ich (bislang) leider noch nicht einbauen." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/B1B854> .
 
-<annotations/ConceptScheme1/anno1> a ns2:Annotation ;
-    ns1:created "2024-08-29T17:14:02.574Z" ;
-    ns1:creator "Lasse" ;
-    ns2:bodyValue "Wir freuen uns immer über weitere Beiträge. Gern einfach in ein weiteres Kommentar schreiben, damit Kristina das ganzen nach dem Urlaub aufnehmen kann. Eine Funktion selbst Änderungen am Thesaurus vorzunehmen, konnte ich (bislang) leider noch nicht einbauen." ;
-    ns2:hasTarget <annotations/ConceptScheme1/B1B854> .
-
-<annotations/ConceptScheme1/anno10> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:24:57.931Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue """Confokalmikroskop ist auch ein wichtiges Lichtmikroskop aber ich müsste die genaue Definition suchen. 
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno10> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:24:57.931Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue """Confokalmikroskop ist auch ein wichtiges Lichtmikroskop aber ich müsste die genaue Definition suchen. 
 Vielleicht ISO 25178-6 (https://www.iso.org/obp/ui/en/#iso:std:iso:25178:-6:ed-1:v1:en)? Nicht sehr klar für mich allerdings... XD""" ;
-    ns2:hasTarget <annotations/ConceptScheme1/FC2113> .
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/FC2113> .
 
-<annotations/ConceptScheme1/anno11> a ns2:Annotation ;
-    ns1:created "2024-09-02T14:21:25.465Z" ;
-    ns1:creator "eckmann" ;
-    ns2:bodyValue "...einer \"Holzmaserung\" ähnelt die Struktur von Elfenbein eigentlich nicht. Charakteristisch sind die sogenannten Schreger'schen Linien, die im Querschnitt eine netzartiges Struktur bilden (und sich dadurch von elfenbeinähnlichen Materialien unterscheiden). " ;
-    ns2:hasTarget <annotations/ConceptScheme1/AG55BC> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno11> a ns3:Annotation ;
+    ns2:created "2024-09-02T14:21:25.465Z" ;
+    ns2:creator "eckmann" ;
+    ns3:bodyValue "...einer \"Holzmaserung\" ähnelt die Struktur von Elfenbein eigentlich nicht. Charakteristisch sind die sogenannten Schreger'schen Linien, die im Querschnitt eine netzartiges Struktur bilden (und sich dadurch von elfenbeinähnlichen Materialien unterscheiden). " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AG55BC> .
 
-<annotations/ConceptScheme1/anno12> a ns2:Annotation ;
-    ns1:created "2024-08-28T05:09:35.498Z" ;
-    ns1:creator "Kristina" ;
-    ns2:bodyValue "Guter Hinweis, ich hab das nochmal nachgeschlagen und den Text entsprechend angepasst. " ;
-    ns2:hasTarget <annotations/ConceptScheme1/A7FA3B> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno12> a ns3:Annotation ;
+    ns2:created "2024-08-28T05:09:35.498Z" ;
+    ns2:creator "Kristina" ;
+    ns3:bodyValue "Guter Hinweis, ich hab das nochmal nachgeschlagen und den Text entsprechend angepasst. " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A7FA3B> .
 
-<annotations/ConceptScheme1/anno13> a ns2:Annotation ;
-    ns1:created "2024-08-28T05:49:19.977Z" ;
-    ns1:creator "Kristina " ;
-    ns2:bodyValue "Wie wäre es mit diesem Vorschlag? Simultan zum Begriff \"konventionelle Radiographie\" habe ich das zugehörige Gerät nun statt nur \"Röntgenanlage\" zu \"konventionelles Röntgengerät\" umbenannt. In der Description wird dann der Unterschied zum CT erklärt (und bei der Description des CTs entsprechend umgekehrt). " ;
-    ns2:hasTarget <annotations/ConceptScheme1/G8D62A> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno13> a ns3:Annotation ;
+    ns2:created "2024-08-28T05:49:19.977Z" ;
+    ns2:creator "Kristina " ;
+    ns3:bodyValue "Wie wäre es mit diesem Vorschlag? Simultan zum Begriff \"konventionelle Radiographie\" habe ich das zugehörige Gerät nun statt nur \"Röntgenanlage\" zu \"konventionelles Röntgengerät\" umbenannt. In der Description wird dann der Unterschied zum CT erklärt (und bei der Description des CTs entsprechend umgekehrt). " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G8D62A> .
 
-<annotations/ConceptScheme1/anno14> a ns2:Annotation ;
-    ns1:created "2024-09-10T08:10:47.108Z" ;
-    ns1:creator "Anja Cramer" ;
-    ns2:bodyValue "Ich würde die Beschreibung hier etwas anpassen, da z.B. bei einem 3D-Druck keine Abformung eines Objektes notwendig ist. Und den Unterbegriff \"DigitaleKopieerstellung\" in \"3D-Druckverfahren\" umbenennen, dann würde es besser zu den beiden anderen passen." ;
-    ns2:hasTarget <annotations/ConceptScheme1/F8F7CF> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno14> a ns3:Annotation ;
+    ns2:created "2024-09-10T08:10:47.108Z" ;
+    ns2:creator "Anja Cramer" ;
+    ns3:bodyValue "Ich würde die Beschreibung hier etwas anpassen, da z.B. bei einem 3D-Druck keine Abformung eines Objektes notwendig ist. Und den Unterbegriff \"DigitaleKopieerstellung\" in \"3D-Druckverfahren\" umbenennen, dann würde es besser zu den beiden anderen passen." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/F8F7CF> .
 
-<annotations/ConceptScheme1/anno15> a ns2:Annotation ;
-    ns1:created "2024-08-28T11:58:55.324Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue "Lyofix CHN" ;
-    ns2:hasTarget <annotations/ConceptScheme1/FF4767> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno15> a ns3:Annotation ;
+    ns2:created "2024-08-28T11:58:55.324Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue "Lyofix CHN" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/FF4767> .
 
-<annotations/ConceptScheme1/anno16> a ns2:Annotation ;
-    ns1:created "2024-08-28T12:04:14.326Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue """Kauramin CE 5549 ist chemisch identisch mit Kauramin 800. Die Typenbezeichung CE steht bei der BASF für Produkte die noch keine volle Marktreife, noch im Teststadium sind. Nachdem sich Kauramin CE 5549 am Markt bewährt hatte, bekam es den brand name Kauramin 800. Vielleicht in der Datenbank Kauramin CE 5549/Kauramin 800 schreiben.
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno16> a ns3:Annotation ;
+    ns2:created "2024-08-28T12:04:14.326Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue """Kauramin CE 5549 ist chemisch identisch mit Kauramin 800. Die Typenbezeichung CE steht bei der BASF für Produkte die noch keine volle Marktreife, noch im Teststadium sind. Nachdem sich Kauramin CE 5549 am Markt bewährt hatte, bekam es den brand name Kauramin 800. Vielleicht in der Datenbank Kauramin CE 5549/Kauramin 800 schreiben.
 Kauramin 800 wurde 2023 vom Markt genommen. Das nun modifizierte Nachfolgeharz mit etwas anderen Eigenschaften heiße Kauramin 801""" ;
-    ns2:hasTarget <annotations/ConceptScheme1/BFB162> .
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BFB162> .
 
-<annotations/ConceptScheme1/anno17> a ns2:Annotation ;
-    ns1:created "2024-08-28T12:06:55.990Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue "Hausenblasenleim (die Hause ist ein Fisch) wurde am RGZM auch verwendet. Ich habs nur einmal als Azubi 1988 benutzt." ;
-    ns2:hasTarget <annotations/ConceptScheme1/GD86C1> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno17> a ns3:Annotation ;
+    ns2:created "2024-08-28T12:06:55.990Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue "Hausenblasenleim (die Hause ist ein Fisch) wurde am RGZM auch verwendet. Ich habs nur einmal als Azubi 1988 benutzt." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/GD86C1> .
 
-<annotations/ConceptScheme1/anno18> a ns2:Annotation ;
-    ns1:created "2024-08-28T12:20:25.151Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue "da könnte ich noch etliche Bearbeitungstechniken zufügen (soll ich?) , eine die viele schon gehört haben: scharriert" ;
-    ns2:hasTarget <annotations/ConceptScheme1/B1B854> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno18> a ns3:Annotation ;
+    ns2:created "2024-08-28T12:20:25.151Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue "da könnte ich noch etliche Bearbeitungstechniken zufügen (soll ich?) , eine die viele schon gehört haben: scharriert" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/B1B854> .
 
-<annotations/ConceptScheme1/anno19> a ns2:Annotation ;
-    ns1:created "2024-08-28T12:21:46.680Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue "manchmal verwende ich auch die harzreichere Variante: Auro Hartöl Nr.126" ;
-    ns2:hasTarget <annotations/ConceptScheme1/A28B4D> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno19> a ns3:Annotation ;
+    ns2:created "2024-08-28T12:21:46.680Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue "manchmal verwende ich auch die harzreichere Variante: Auro Hartöl Nr.126" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A28B4D> .
 
-<annotations/ConceptScheme1/anno2> a ns2:Annotation ;
-    ns1:created "2024-08-27T11:55:35.932Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "aus meiner Sicht kann konventionelle Radiographie auch mit einem digitalen Detektor statt Röntgenfilmen abbilden" ;
-    ns2:hasTarget <annotations/ConceptScheme1/A2B5A3> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno2> a ns3:Annotation ;
+    ns2:created "2024-08-27T11:55:35.932Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "aus meiner Sicht kann konventionelle Radiographie auch mit einem digitalen Detektor statt Röntgenfilmen abbilden" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A2B5A3> .
 
-<annotations/ConceptScheme1/anno20> a ns2:Annotation ;
-    ns1:created "2024-08-28T13:17:48.410Z" ;
-    ns1:creator "Markus" ;
-    ns2:bodyValue "in der Metallrestaurierung (unter Lazlo Lehoczky) wurden Metallobjekte nach der Bearbeitung mit Pantarol (Nitrocelluloselack) gegen Luftfeuchtigkeit geschützt. Bitte Pantarol aufnehmen" ;
-    ns2:hasTarget <annotations/ConceptScheme1/GC7998> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno20> a ns3:Annotation ;
+    ns2:created "2024-08-28T13:17:48.410Z" ;
+    ns2:creator "Markus" ;
+    ns3:bodyValue "in der Metallrestaurierung (unter Lazlo Lehoczky) wurden Metallobjekte nach der Bearbeitung mit Pantarol (Nitrocelluloselack) gegen Luftfeuchtigkeit geschützt. Bitte Pantarol aufnehmen" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/GC7998> .
 
-<annotations/ConceptScheme1/anno21> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:28:39.985Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue """Hier müsste noch als Unterpunkt der Sapropelit hinzugefügt werden. Ausführliche Beschreibung
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno21> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:28:39.985Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue """Hier müsste noch als Unterpunkt der Sapropelit hinzugefügt werden. Ausführliche Beschreibung
 
 Sapropelite sind das Resultat verfestigter Faulschlämme (altgriechisch σαπρός sapros „faul“, „verfault“). Sie entstehen unter natürlichen Bedingungen in zuvor nährstoffreichen Gewässern und Sümpfen, wenn organisches Material bei Abwesenheit von Sauerstoff biochemisch umgewandelt wird. Quelle: Mineralienatlas.de""" ;
-    ns2:hasTarget <annotations/ConceptScheme1/G76A78> .
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G76A78> .
 
-<annotations/ConceptScheme1/anno22> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:36:04.802Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue "Bei den Mineralien fehlen noch als Untergruppen: Korund mit den Untergruppen Saphire und Rubin; dann der Smaragd; Fluorit oder Flussspat müsste auch noch hinzu.  " ;
-    ns2:hasTarget <annotations/ConceptScheme1/BGC9F3> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno22> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:36:04.802Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue "Bei den Mineralien fehlen noch als Untergruppen: Korund mit den Untergruppen Saphire und Rubin; dann der Smaragd; Fluorit oder Flussspat müsste auch noch hinzu.  " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BGC9F3> .
 
-<annotations/ConceptScheme1/anno23> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:37:10.623Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue "Sollten wir bei den Mineralien die jeweilige Moossche Härte angeben?" ;
-    ns2:hasTarget <annotations/ConceptScheme1/BGC9F3> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno23> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:37:10.623Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue "Sollten wir bei den Mineralien die jeweilige Moossche Härte angeben?" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BGC9F3> .
 
-<annotations/ConceptScheme1/anno24> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:42:03.263Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue "Hier fehlen noch als Unterpunkt die Perle und da wiederum die Unterscheidung zwischen Süßwasser- und Salzwasserperlen" ;
-    ns2:hasTarget <annotations/ConceptScheme1/F1BA31> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno24> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:42:03.263Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue "Hier fehlen noch als Unterpunkt die Perle und da wiederum die Unterscheidung zwischen Süßwasser- und Salzwasserperlen" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/F1BA31> .
 
-<annotations/ConceptScheme1/anno25> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:44:23.961Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue "Unterscheiden wir hier von welchem Baum das Pech gewonnen wurde? Birke, Buche, Nadelholz" ;
-    ns2:hasTarget <annotations/ConceptScheme1/D467F2> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno25> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:44:23.961Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue "Unterscheiden wir hier von welchem Baum das Pech gewonnen wurde? Birke, Buche, Nadelholz" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/D467F2> .
 
-<annotations/ConceptScheme1/anno26> a ns2:Annotation ;
-    ns1:created "2024-08-28T14:49:55.505Z" ;
-    ns1:creator "Matthias Heinzel" ;
-    ns2:bodyValue "Unterscheiden wir hier zwischen fossilem Elfenbein und \"frischem Elfenbein\"?" ;
-    ns2:hasTarget <annotations/ConceptScheme1/AG55BC> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno26> a ns3:Annotation ;
+    ns2:created "2024-08-28T14:49:55.505Z" ;
+    ns2:creator "Matthias Heinzel" ;
+    ns3:bodyValue "Unterscheiden wir hier zwischen fossilem Elfenbein und \"frischem Elfenbein\"?" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AG55BC> .
 
-<annotations/ConceptScheme1/anno27> a ns2:Annotation ;
-    ns1:created "2024-09-02T09:52:59.466Z" ;
-    ns1:creator "Anonymus" ;
-    ns2:bodyValue "Infrarot Fotographie hier ergänzen?" ;
-    ns2:hasTarget <annotations/ConceptScheme1/CA7279> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno27> a ns3:Annotation ;
+    ns2:created "2024-09-02T09:52:59.466Z" ;
+    ns2:creator "Anonymus" ;
+    ns3:bodyValue "Infrarot Fotographie hier ergänzen?" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/CA7279> .
 
-<annotations/ConceptScheme1/anno28> a ns2:Annotation ;
-    ns1:created "2024-09-02T09:57:22.096Z" ;
-    ns1:creator "Anonymus" ;
-    ns2:bodyValue "warum sind \"Analyse der chemischen Zusammensetzung\" und \"chemische Zusammensetzung\" zwei unterschiedliche Unterpunkte?" ;
-    ns2:hasTarget <annotations/ConceptScheme1/G17B8B> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno28> a ns3:Annotation ;
+    ns2:created "2024-09-02T09:57:22.096Z" ;
+    ns2:creator "Anonymus" ;
+    ns3:bodyValue "warum sind \"Analyse der chemischen Zusammensetzung\" und \"chemische Zusammensetzung\" zwei unterschiedliche Unterpunkte?" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G17B8B> .
 
-<annotations/ConceptScheme1/anno29> a ns2:Annotation ;
-    ns1:created "2024-09-03T13:45:45.455Z" ;
-    ns1:creator "Kristina" ;
-    ns2:bodyValue "Kauramin CE 5549 wird als eigener Begriff aussortiert. Stattdessen bei Kauramin 800 als \"altLabel\" integriert und im der Description erläutert" ;
-    ns2:hasTarget <annotations/ConceptScheme1/BFB162> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno29> a ns3:Annotation ;
+    ns2:created "2024-09-03T13:45:45.455Z" ;
+    ns2:creator "Kristina" ;
+    ns3:bodyValue "Kauramin CE 5549 wird als eigener Begriff aussortiert. Stattdessen bei Kauramin 800 als \"altLabel\" integriert und im der Description erläutert" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BFB162> .
 
-<annotations/ConceptScheme1/anno3> a ns2:Annotation ;
-    ns1:created "2024-08-27T11:56:02.873Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "Die Definition ist glaube ich für „Röntgen-CT“. Tomographie bezeichnet nur die Rekonstruktion von einem 3D Modell aus vielen (Projektions)Bildern; es gibt auch Neutrontomographie, MRT, usw.  und auch Röntgentomographie (ohne Computer)! CT bezeichnet wahrscheinlich nur Röntgen-CT aber um sicher zu sein, würde ich empfehlen, den Begriff zu „Röntgen-Computertomographie“ zu ändern." ;
-    ns2:hasTarget <annotations/ConceptScheme1/AF9A88> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno3> a ns3:Annotation ;
+    ns2:created "2024-08-27T11:56:02.873Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "Die Definition ist glaube ich für „Röntgen-CT“. Tomographie bezeichnet nur die Rekonstruktion von einem 3D Modell aus vielen (Projektions)Bildern; es gibt auch Neutrontomographie, MRT, usw.  und auch Röntgentomographie (ohne Computer)! CT bezeichnet wahrscheinlich nur Röntgen-CT aber um sicher zu sein, würde ich empfehlen, den Begriff zu „Röntgen-Computertomographie“ zu ändern." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AF9A88> .
 
-<annotations/ConceptScheme1/anno30> a ns2:Annotation ;
-    ns1:created "2024-09-03T13:46:00.145Z" ;
-    ns1:creator "Lasse" ;
-    ns2:bodyValue "Kristina hat diesen Begriff entfernt. Wir arbeiten noch an einem Umgang mit entfernten Begriffen, damit sie nicht zu Fehlern in der Kommentarumgebung führen..." ;
-    ns2:hasTarget <annotations/ConceptScheme1/BFB162> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno30> a ns3:Annotation ;
+    ns2:created "2024-09-03T13:46:00.145Z" ;
+    ns2:creator "Lasse" ;
+    ns3:bodyValue "Kristina hat diesen Begriff entfernt. Wir arbeiten noch an einem Umgang mit entfernten Begriffen, damit sie nicht zu Fehlern in der Kommentarumgebung führen..." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BFB162> .
 
-<annotations/ConceptScheme1/anno31> a ns2:Annotation ;
-    ns1:created "2024-09-03T13:49:05.583Z" ;
-    ns1:creator "Kristina" ;
-    ns2:bodyValue "Die Anmerkung verstehe ich nicht so ganz. Es gibt keinen Punkt \"chemische Zusammensetzung\". Oder meinst du \"chemische Untersuchung\" ? Damit sind Untersuchungen gemeint, bei denen mit Hilfe von chemischen Reagenzien Verhaltensweisen von Materialien getestet werden (z.B. Spot-Tests für unbekannte Klebstoffe bei Altrestaurierungen, etc.) " ;
-    ns2:hasTarget <annotations/ConceptScheme1/G17B8B> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno31> a ns3:Annotation ;
+    ns2:created "2024-09-03T13:49:05.583Z" ;
+    ns2:creator "Kristina" ;
+    ns3:bodyValue "Die Anmerkung verstehe ich nicht so ganz. Es gibt keinen Punkt \"chemische Zusammensetzung\". Oder meinst du \"chemische Untersuchung\" ? Damit sind Untersuchungen gemeint, bei denen mit Hilfe von chemischen Reagenzien Verhaltensweisen von Materialien getestet werden (z.B. Spot-Tests für unbekannte Klebstoffe bei Altrestaurierungen, etc.) " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G17B8B> .
 
-<annotations/ConceptScheme1/anno33> a ns2:Annotation ;
-    ns1:created "2024-09-10T08:44:57.246Z" ;
-    ns1:creator "Kristina" ;
-    ns2:bodyValue "Ist angepasst, vielen Dank. Die ursprüngliche Beschreibung war noch auf die reine analoge Kopieherstellung bezogen. Auch den Begriff habe ich entsprechend des Vorschlags geändert. " ;
-    ns2:hasTarget <annotations/ConceptScheme1/F8F7CF> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno33> a ns3:Annotation ;
+    ns2:created "2024-09-10T08:44:57.246Z" ;
+    ns2:creator "Kristina" ;
+    ns3:bodyValue "Ist angepasst, vielen Dank. Die ursprüngliche Beschreibung war noch auf die reine analoge Kopieherstellung bezogen. Auch den Begriff habe ich entsprechend des Vorschlags geändert. " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/F8F7CF> .
 
-<annotations/ConceptScheme1/anno34> a ns2:Annotation ;
-    ns1:created "2024-09-10T09:30:10.007Z" ;
-    ns1:creator "Anja Cramer" ;
-    ns2:bodyValue "Ist die Unterscheidung zwischen analoger und digitaler Abformung richtig? Ich würde eher auf die Ebene der Abformung noch 3D-Digitalisierung hinzufügen und die Unterscheidung von analoger und digitaler Abformung löschen? Dann wäre 3D-Digitalisierung eine Vorgehensweise zur Erstellung von wissenschaftlichen Kopien." ;
-    ns2:hasTarget <annotations/ConceptScheme1/DAG2A8> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno34> a ns3:Annotation ;
+    ns2:created "2024-09-10T09:30:10.007Z" ;
+    ns2:creator "Anja Cramer" ;
+    ns3:bodyValue "Ist die Unterscheidung zwischen analoger und digitaler Abformung richtig? Ich würde eher auf die Ebene der Abformung noch 3D-Digitalisierung hinzufügen und die Unterscheidung von analoger und digitaler Abformung löschen? Dann wäre 3D-Digitalisierung eine Vorgehensweise zur Erstellung von wissenschaftlichen Kopien." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/DAG2A8> .
 
-<annotations/ConceptScheme1/anno4> a ns2:Annotation ;
-    ns1:created "2024-08-27T13:02:42.906Z" ;
-    ns1:creator "Kristina" ;
-    ns2:bodyValue "Alright, ist geändert. Danke Ivan. " ;
-    ns2:hasTarget <annotations/ConceptScheme1/AF9A88> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno4> a ns3:Annotation ;
+    ns2:created "2024-08-27T13:02:42.906Z" ;
+    ns2:creator "Kristina" ;
+    ns3:bodyValue "Alright, ist geändert. Danke Ivan. " ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AF9A88> .
 
-<annotations/ConceptScheme1/anno5> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:21:09.315Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "der CT ist auch eine Röntgenanlage :) Mir fehlt kein Begriff ein, der nur für konventionelle Radiographie als Gerät benutzt wird. Vom Hardware gibt es kaum Unterschiede zwischen CT und konventionelle (digitale) Radiographie: nur der Drehteller eigentlich!" ;
-    ns2:hasTarget <annotations/ConceptScheme1/G8D62A> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno5> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:21:09.315Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "der CT ist auch eine Röntgenanlage :) Mir fehlt kein Begriff ein, der nur für konventionelle Radiographie als Gerät benutzt wird. Vom Hardware gibt es kaum Unterschiede zwischen CT und konventionelle (digitale) Radiographie: nur der Drehteller eigentlich!" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G8D62A> .
 
-<annotations/ConceptScheme1/anno6> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:21:45.561Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "es ist ein Lichtmikroskop. Einfache Definition: Mikroskop ohne Okulare (nur Kamera+Bildschirm)." ;
-    ns2:hasTarget <annotations/ConceptScheme1/AG4G3C> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno6> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:21:45.561Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "es ist ein Lichtmikroskop. Einfache Definition: Mikroskop ohne Okulare (nur Kamera+Bildschirm)." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AG4G3C> .
 
-<annotations/ConceptScheme1/anno7> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:22:14.558Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "ist es immer mit Cross-Polarisation? Man kann es doch nur mit einem Filter anwenden, oder?" ;
-    ns2:hasTarget <annotations/ConceptScheme1/A7FA3B> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno7> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:22:14.558Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "ist es immer mit Cross-Polarisation? Man kann es doch nur mit einem Filter anwenden, oder?" ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A7FA3B> .
 
-<annotations/ConceptScheme1/anno8> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:22:53.368Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "Bei der digitalen Mikroskopie geht das Licht vom Objektiv auch bzw. nur zur Kamera." ;
-    ns2:hasTarget <annotations/ConceptScheme1/B94DCD> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno8> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:22:53.368Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "Bei der digitalen Mikroskopie geht das Licht vom Objektiv auch bzw. nur zur Kamera." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/B94DCD> .
 
-<annotations/ConceptScheme1/anno9> a ns2:Annotation ;
-    ns1:created "2024-08-27T14:23:00.853Z" ;
-    ns1:creator "Ivan" ;
-    ns2:bodyValue "Bei der digitalen Mikroskopie geht das Licht vom Objektiv auch bzw. nur zur Kamera." ;
-    ns2:hasTarget <annotations/ConceptScheme1/A9611D> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/anno9> a ns3:Annotation ;
+    ns2:created "2024-08-27T14:23:00.853Z" ;
+    ns2:creator "Ivan" ;
+    ns3:bodyValue "Bei der digitalen Mikroskopie geht das Licht vom Objektiv auch bzw. nur zur Kamera." ;
+    ns3:hasTarget <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A9611D> .
 
-<annotations/ConceptScheme1/top> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/DA2D73> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/A28B4D> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/top> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/A2B5A3> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A28B4D> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/A9611D> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A2B5A3> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/AG4G3C> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A9611D> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/B94DCD> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AG4G3C> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/CA7279> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/B94DCD> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/D467F2> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/CA7279> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/DAG2A8> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/D467F2> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/F1BA31> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/DAG2A8> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/FC2113> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/F1BA31> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/FF4767> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/FC2113> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/G76A78> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/FF4767> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/GC7998> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G76A78> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/GD86C1> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/GC7998> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/A7FA3B> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/GD86C1> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/AF9A88> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/A7FA3B> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/AG55BC> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AF9A88> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/B1B854> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/AG55BC> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/BGC9F3> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/B1B854> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/F8F7CF> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BGC9F3> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/G17B8B> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/F8F7CF> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/G8D62A> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G17B8B> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/BFB162> a ns3:Concept ;
-    ns3:inScheme <annotations/ConceptScheme1/> .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/G8D62A> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
 
-<annotations/ConceptScheme1/> a ns3:ConceptScheme ;
-    ns1:title "LEIZA Restaurierungs- und Konservierungsthesaurus" .
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/BFB162> a ns1:Concept ;
+    ns1:inScheme <https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> .
+
+<https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1> a ns1:ConceptScheme ;
+    ns2:title "LEIZA Restaurierungs- und Konservierungsthesaurus" .
 
