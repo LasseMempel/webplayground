@@ -12,7 +12,7 @@ g = rdflib.Graph()
 
 schemeURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1"
 conceptURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/"
-annotationURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptScheme1/Annotations/"
+annotationURI = "https://restaurierungsvokabular.solidweb.org/annotationsConceptSchemes/ConceptScheme1/Annotations/"
 
 # parse the annotationScheme into the triplestore
 g.parse(data=annotationScheme, format="turtle")
