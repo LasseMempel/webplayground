@@ -48,6 +48,7 @@ for annotation in g.subjects(RDF.type, AO.Annotation):
     h.add((URIRef(annotationURI+id), DCTERMS.created, created))
     h.add((URIRef(annotationURI+id), AO.bodyValue, body))
     h.add((URIRef(annotationURI+id), AO.hasTarget, URIRef(target)))
+    h.add((URIRef(annotationURI+id), SKOS.inScheme, URIRef(schemeURI)))
 
 # serialize the new triplestore
 h.serialize(destination="annotationConceptScheme.ttl", format="turtle")
