@@ -16,6 +16,11 @@ annotationURI = "https://restaurierungsvokabular.solidweb.org/annotations/Concep
 
 # parse the annotationScheme into the triplestore
 g.parse(data=annotationScheme, format="turtle")
+# remove all concepts from the triplestore that are not target of an annotation
+for concept in g.subjects(RDF.type, SKOS.Concept):
+    if not g.value(None, AO.hasTarget, concept):
+        g.remove((concept, None, None))
+        g.remove((None, None, concept))
 
 # create new triplestore h
 h = rdflib.Graph()
@@ -52,30 +57,5 @@ for annotation in g.subjects(RDF.type, AO.Annotation):
 
 # serialize the new triplestore
 h.serialize(destination="annotationConceptScheme.ttl", format="turtle")
-    
-
-"""
-# create a new skos:ConceptScheme and add it to the triplestore
-scheme = URIRef(uri+"ConceptSchemescheme1")
-g.add((scheme, RDF.type, SKOS.ConceptScheme))
-# add a title to the skos:ConceptScheme "Leiza Restaurierungs- und Konservierungsthesaurus"
-g.add((scheme, DCTERMS.title, Literal("Leiza Restaurierungs- und Konservierungsthesaurus")))
-
-# add the new skos:ConceptScheme to all skos:Concepts in the triplestore
-for concept in g.subjects(RDF.type, SKOS.Concept):
-    g.add((concept, SKOS.inScheme, scheme))
-
-anotherScheme = URIRef("https://restaurierungsvokabular.solidweb.org/annotations/annotations.ttl/schemes/scheme2")
-g.add((anotherScheme, RDF.type, SKOS.ConceptScheme))
-
-# add a concept to the anotherScheme
-newConcept = URIRef("https://restaurierungsvokabular.solidweb.org/annotations/annotations.ttl/schemes/scheme2/concepts/concept1")
-g.add((newConcept, RDF.type, SKOS.Concept))
-g.add((newConcept, SKOS.prefLabel, Literal("New Concept")))
-g.add((newConcept, SKOS.inScheme, anotherScheme))
-
-# serialize the updated triplestore
-g.serialize(destination="annotationConceptScheme.ttl", format="turtle")
-"""
 
 
