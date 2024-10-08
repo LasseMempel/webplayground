@@ -10,9 +10,9 @@ with open("annotationScheme.ttl", "r") as f:
     annotationScheme = f.read()
 g = rdflib.Graph()
 
-schemeURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1"
-conceptURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/"
-annotationURI = "https://restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Annotations/"
+schemeURI = "https://www.restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1"
+conceptURI = "https://www.restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Concepts/"
+annotationURI = "https://www.restaurierungsvokabular.solidweb.org/annotations/ConceptSchemes/ConceptScheme1/Annotations/"
 
 # parse the annotationScheme into the triplestore
 g.parse(data=annotationScheme, format="turtle")
