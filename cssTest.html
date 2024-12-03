@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    div {
+        /*
+        initialize standard css values for div background-color, color, border-width, border-color, border-style, padding, margin
+        */
+        height: 200px;
+        width: 200px;
+        background-color: lightblue;
+        color: black;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box; /*content-box;*/
+    }
+
+    text {
+        display: inline-block;
+    }
+  </style>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br><br>
+    <div> 
+        <text>Yello,</text> 
+        <sausage>Wurst.</sausage>
+        <text>greetings!</text>
+    </div>
+    <!--  10 empty lines -->
+    <br><br><br><br><br><br><br><br><br>
+    <!--  add forms with buttons for css properties border-width, padding and margin to increase and decrease -->
+    <form>
+        <button type="button" onclick="document.querySelector('div').style.borderWidth = '5px'">Increase Border Width</button>
+        <button type="button" onclick="document.querySelector('div').style.borderWidth = '1px'">Decrease Border Width</button>
+    </form>
+    <form>
+        <button type="button" onclick="document.querySelector('div').style.padding = '20px'">Increase Padding</button>
+        <button type="button" onclick="document.querySelector('div').style.padding = '10px'">Decrease Padding</button>
+    </form>
+    <form>
+        <button type="button" onclick="document.querySelector('div').style.margin = '20px'">Increase Margin</button>
+        <button type="button" onclick="document.querySelector('div').style.margin = '10px'">Decrease Margin</button>
+    </form>
+</body>
+</html
